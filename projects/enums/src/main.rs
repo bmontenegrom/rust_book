@@ -17,6 +17,6 @@ enum Message {
 
 impl Message {
     fn call(&self){
-        5
+        // method body would be defined here
     }
 }

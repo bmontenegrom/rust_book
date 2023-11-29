@@ -84,7 +84,7 @@ fn main() {
     use std::collections::HashMap;
     let mut scores = HashMap::new();
 
-    scores.insert(String::from("Blue"), 10);//hash map se adueña de los valores que no implementan Copy, como String
+    scores.insert(String::from("Blue"), 10); //hash map se adueña de los valores que no implementan Copy, como String
     scores.insert(String::from("Yellow"), 50);
 
     let team_name = String::from("Blue");
@@ -97,23 +97,22 @@ fn main() {
 
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
-    scores.insert(String::from("Blue"), 25);//insert dos veces sobre escribe
+    scores.insert(String::from("Blue"), 25); //insert dos veces sobre escribe
     println!("{:?}", scores);
 
     let mut scores = HashMap::new();
     scores.insert(String::from("Blue"), 10);
-    scores.entry(String::from("Blue")).or_insert(50);//si no está inserta
+    scores.entry(String::from("Blue")).or_insert(50); //si no está inserta
     scores.entry(String::from("Yellow")).or_insert(50);
     println!("{:?}", scores);
 
     let text = "hello world wonderful world";
     let mut map = HashMap::new();
-    for word in text.split_whitespace(){
-        let count = map.entry(word).or_insert(0);//devuelve &mut Value
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0); //devuelve &mut Value
         *count += 1;
     }
     println!("{:?}", map);
-
 }
 
 enum SpreadsheetCell {

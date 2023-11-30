@@ -11,7 +11,16 @@ fn main() {
         let string4 = String::from("xyz");
         let result_prueba = longest(string3.as_str(), &string4.as_str());
         println!("the longest string is {result_prueba}");
-    }
+    };
+    
+    let novel = String::from("Call me Ishmael. Some years ago...");
+
+    let first_sentence = novel.split('.').next().expect("Could not find a '.'");
+
+    let i = ImportantExcerp {
+        part: first_sentence,
+    };
+    println!("imprimiento: {}", i.part)
     
 }
 
@@ -23,3 +32,17 @@ fn longest<'a>(x: &'a str, y:&'a str) -> &'a str{
         y
     }
 }
+
+struct ImportantExcerp<'a>{
+    part: &'a str,
+}
+
+fn first_world(s: &str) -> &str {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' '{
+            return  &s[0..i];
+        }
+    }
+    &s[..]
+ }

@@ -1,1 +1,1 @@
-C:\Repositorio\rust_book\projects\generics\target\debug\libgenerics.rlib: C:\Repositorio\rust_book\projects\generics\src\lib.rs
+C:\Repos\rust_book\projects\generics\target\debug\libgenerics.rlib: C:\Repos\rust_book\projects\generics\src\lib.rs

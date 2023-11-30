@@ -37,7 +37,7 @@ struct ImportantExcerp<'a>{
     part: &'a str,
 }
 
-fn first_world(s: &str) -> &str {
+fn first_world(s: &str) -> &str { //en algunas funciones no es necesario anotar las lifetimes, fn first_word<'a>(s: &'a str) -> &'a str {
     let bytes = s.as_bytes();
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' '{

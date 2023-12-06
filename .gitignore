@@ -1,3 +1,5 @@
 
 *.json
 projects/*/target*
+projects/*/target/*.json
+

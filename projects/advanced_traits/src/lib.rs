@@ -1,6 +1,6 @@
 impl Iterator for Counter {
     type Item = u32;
-    fn next(&mut self) ->Option<Self::Item>
+    fn next(&mut self) ->Option<Self::Item>;
 }
 /*can define with generics 
     pub trait Iterator<T> {
